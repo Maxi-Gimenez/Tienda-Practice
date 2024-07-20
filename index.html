@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <title>Tienda - Project</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-tittle">Tienda</h1>
+        <nav class="header-nav">
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="" class="nav-li-a">Categorias</a></li>
+                <li class="nav-li"><a href="" class="nav-li-a">Mi Carrito</a></li>
+                <li class="nav-li"><a href="" class="nav-li-a">Mi Cuenta</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="tags-header">
+        <a href="#">Inicio</a>
+        <span> > </span>
+        <a href="#">Tennis</a>
+        <span> > </span>
+        <a href="#">Jordan 1</a>
+    </div>
+
+    <main class="zapatillas">
+        <div class="grilla-Zapas">
+            <div id="image-Conteiner">
+                <img src="assets/jordan1-negras.png" class="imageActual">
+            </div>
+
+            <div class="personalizacion-Jordan">
+                <div>
+                    <div class="estrellas" style="color: #002cee;"><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i></div>
+                    <h2>Nike Air Jordan 1</h2>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+                
+                <div class="precio">
+                    <p class="parrafos-subtittle">Precio</p>
+                    <p id="precio-numero">$358.000</p>
+                </div>
+    
+                <div class="colorSelect">
+                    <p class="parrafos-subtittle">Color</p>
+                    <div class="contenedorcolores contenedores">
+                        <button  id="colors1" class="btnColor btnJavascript" value="Negro">
+                            <div></div>
+                            Negro
+                        </button>
+                        <button id="colors2" class="btnColor btnJavascript" value="Rojo">
+                            <div></div>
+                            Rojo
+                        </button>
+                        <button id="colors3" class="btnColor btnJavascript" value="Azul">
+                            <div></div>
+                            Azul
+                        </button>
+
+                    </div>
+                </div>
+    
+                <div class="tamaño">
+                    <p class="parrafos-subtittle">Tamaño</p>
+                    <div class="contenedorTamaño contenedores" >
+                        <button id="tamaño2" class="tamaño-num" value="1.5">1.5</button>
+                        <button id="tamaño3" class="tamaño-num" value="2">2</button>
+                        <button id="tamaño4" class="tamaño-num" value="2.5">2.5</button>
+                        <button id="tamaño5" class="tamaño-num" value="3">3</button>
+                        <button id="tamaño6" class="tamaño-num" value="2.5">3.5</button>
+                        <button id="tamaño7" class="tamaño-num" value="3">4</button>
+                    </div>
+                </div>
+    
+                <div class="cantidad">
+                    <p class="parrafos-subtittle">Cantidad</p>
+                    
+                    <div class="contador contenedores">
+                        <button id="cantidadMenos" class="btnMasoMenos">-</button>
+                        <p id="cantidad-num"></p>
+                        <button id="cantidadMas" class="btnMasoMenos">+</button>
+                    </div>
+                </div>
+
+                <div class="contenedor-btn-agregar">
+                    <button id="btnAgregarAlCarrito" onclick="agregarAlCarrito()">Agregar al Carrito</button>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+    
+    <div id="avisoCarrito">
+        <p>Agregado al Carrito</p>
+        <img src="assets/jordan1-negras.png" alt="">
+        <button id="verCarritoAviso" class="verCarrito">Ver carrito</button>
+    </div>
+
+
+    <div id="overlay" class="overlay"></div>
+    <div id="verCarrito">
+        <div class="header-carrito">
+            <p>Carrito</p>
+            <button id="carritoCerrar">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <div class="infoCarrito">
+            <div class="infoElement">
+                <img src="/assets/jordan1-negras.png" style="width: 65px; height: 100%; border-radius: 5px;" alt="">
+                <div class="infoCompra">
+                    <p class="infoP"><span id="cuantasJordan"></span> Nike Air Jordan 1</p>
+                    <div>
+                        <p class="subInfo">Tamaño: <span id="spanInfoTamaño"></span> </p>
+                        <p class="subInfo">Color: <span id="spanInfoColor"></span></p>
+                    </div>
+                </div>
+                <div class="salir">
+                    <button id="carritoBorrar">
+                        <i class='bx bx-x'></i>
+                    </button>
+                    <p class="precioInfo"></p>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <div class="s">
+                <p class="parrafos-subtittle">Total:</p>
+                <p id="totalInfoCarrito"></p>
+            </div>
+            <div>
+                <button id="btnComprar">Comprar</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

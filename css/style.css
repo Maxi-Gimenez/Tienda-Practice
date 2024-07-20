@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: #eee;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+.nav-ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    .nav-li{
+        list-style: none;
+    }
+}
+
+.nav-li-a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.tags-header{
+    display: flex;
+    margin-left: 15%;
+    & >a{
+        color: #0009;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    & > a:nth-child(5){
+        text-decoration: underline;
+        color: #000;
+    }
+}
+
+.zapatillas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+.grilla-Zapas{
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #0002;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+    width: 70%;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+
+#image-Conteiner{
+    background-color: #000;
+    height: 500px;
+    display: flex;
+}
+.imageActual{
+    width: 100%;
+}
+
+.personalizacion-Jordan{
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    &>p{
+        color: #222;
+        margin-bottom: 13px;
+    }
+}
+.parrafos-subtittle{
+    font-size: .8rem;
+    color: #000;
+    font-weight: 600;
+}
+#precio-numero{
+    font-size: 2rem;
+    font-weight: 650;
+}
+.btnColor{
+    width: 80px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    &:hover{
+        opacity: .9;
+    }
+    &>div{
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
+    
+}
+.btnColor:first-child>div{
+    background-color: #000;
+}
+.btnColor:nth-child(2)>div{
+    background-color: #f00;
+}
+.btnColor:nth-child(3)>div{
+    background-color: #00f;
+}
+
+
+
+.contenedorcolores{
+    display: flex;
+    gap: 10px;
+}
+
+.tamaño-num{
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    &:hover{
+        opacity: .9;
+    }
+}
+
+
+
+.activo{
+    border: #000 1px solid;
+}
+.contador{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    &>p{
+        font-size: 1.3rem;
+    }
+}
+.btnMasoMenos{
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    &:hover{
+        opacity: .9;
+    }
+}
+
+
+.contenedor-btn-agregar{
+    display: flex;
+    align-items: center;
+    &>button{
+        height: 35px;
+        width: 150px;
+        border: none;
+        background-color: #000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+}
+
+
+#avisoCarrito > img{
+    width: 100px;
+}
+#avisoCarrito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 170px;
+    margin: 10px;
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #0002;
+    transition: all .3s ease;
+    
+    position: absolute;
+    top: 70%;
+    left: -200px;
+  
+}
+#avisoCarrito > p{
+    font-size: .80rem;
+    padding: 5px;
+    &::after{
+        content: "✓";
+        
+    }
+}
+#avisoCarrito > button{
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    cursor: pointer;
+    height: 30px;
+}
+
+
+
+
+
+
+#verCarrito{
+    width: 450px;
+    background-color: #eee;
+    position: fixed; /* Cambiado a fixed para asegurar que permanezca en la vista */
+    left: 50%; /* Centra el contenedor horizontalmente */
+    top: 50%; /* Centra el contenedor verticalmente */
+    transform: translate(-50%, -50%); /* Ajusta el centrado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    border-radius: 10px;
+    display: none;
+    padding: 20px;
+    box-sizing: border-box
+}
+
+.header-carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    &>p{
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    &>button{
+        background-color: #000;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+.infoCarrito{
+    background-color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+.infoElement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoP, #totalInfoCarrito{
+    font-size: 1.05rem;
+    font-weight: 600;
+}
+.infoCompra>div{
+    display: flex;
+    font-size:.8rem ;
+    gap: 20px;
+}
+.salir{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px;
+}
+#carritoBorrar{
+    background-color: #eee;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: #000;
+        color: #fff;
+    }
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    &>.s{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        flex-direction: column;
+        &>#totalInfoCarrito{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    }
+}
+
+
+#btnComprar{
+    width: 100px;
+    height: 40px;
+    background-color: #000;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 100;
+}
+
+
+
+
+@media screen and (max-width:900px) {
+    .header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .grilla-Zapas{
+        flex-direction: column;
+
+    }
+    #image-Conteiner{
+        height: 70%;
+    }
+    
+}
